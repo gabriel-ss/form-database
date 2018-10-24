@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/master.css">
+	<link rel="stylesheet" href="/css/dark-theme.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<title>Form manager</title>
+</head>
+<style media="screen">
+
+	#login-form {
+		width:25rem;
+		margin: auto;
+	}
+
+	#login-form input {
+		width:100%;
+	}
+
+	#login-form input[type="submit"] {
+		background-image: linear-gradient(225deg,#e14eca,#ba54f5,#e14eca);
+		background-size: 210% 210%;
+		background-position: 100% 0;
+		color: #fff;
+		box-shadow: none;
+		border: none;
+		font-size: 1rem;
+		font-weight: bold;
+		padding: .8rem 2.5rem;
+		margin: 0 1em 1em;
+		float: right;
+		width: auto;
+	}
+
+	body {
+		font-family: 'Poppins', sans-serif;
+	}
+
+	#dashboard {
+		width: 65%;
+   	height: 80vh;
+		margin: auto;
+		display: inline-flex;
+	}
+
+	#dashboard button,
+	#create-button {
+		background-image: linear-gradient(225deg,#e14eca,#ba54f5,#e14eca);
+      background-size: 210% 210%;
+      background-position: 100% 0;
+		color: #fff;
+		box-shadow: none;
+		border: none;
+		font-size: 1rem;
+		font-weight: bold;
+		padding: .8rem 2.5rem;
+		margin: 0 1em 1em;
+		float: right;
+		width: auto;
+	}
+
+	.sidebar {
+		width: 20em;
+      height: 100vh;
+      display: inline-block;
+		box-sizing: border-box;
+		padding: 1em;
+		background: linear-gradient(30deg,#ba54f5,#e14eca);
+	}
+
+	.sidebar input {
+		background: rgba(0, 0, 0, 0);
+		border-width: 0 0 1px;
+		border-radius: 0;
+	}
+
+	.vertical-nav {
+		flex-flow: column;
+	}
+
+	button[name="create-form"],
+	input,
+	textarea {
+		margin: auto;
+      display: block;
+		box-sizing: border-box;
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	#form-list {
+		cursor: pointer;
+	}
+
+	.slideshow {
+		width: 100%;
+	}
+
+	#answers-display {
+		height: 30rem;
+		white-space: pre-line;
+	}
+
+	#form-creator textarea {
+		min-height: 30em;
+	}
+
+</style>
+
+<body class="">
+	<div id="login-view" class="active view primary gradient">
+		<form id="login-form" class="card container">
+			<div class="header">
+				Login
+			</div>
+			<div class="body">
+				<label>E-Mail
+					<input type="email" name="email" required>
+				</label>
+				<label>Password
+					<input type="password" name="password" required>
+				</label>
+			</div>
+			<div class="footer">
+				<div id="alert-display" class="container"></div>
+				<a href="#">Create account</a>
+				<input id="login-button" type="submit" value="Login">
+			</div>
+		</form>
+	</div>
+	<div id="dashboard-view" class="view">
+		<div class="sidebar">
+			<div class="header">
+				<h3>Form list</h3>
+			</div>
+			<nav class="vertical-nav">
+				<input type="text" class="filter" data-filter-target="form-list" placeholder="Filter forms">
+				<ul id="form-list" class="vertical-nav">
+				</ul>
+				<button name="create-form" data-toggles="form-creator">Create form</button>
+			</nav>
+		</div>
+		<div id="dashboard" class="card">
+			<div class="header">
+				Form answers
+			</div>
+			<div class="body">
+				<div class="slideshow">
+					<div id="answers-display" class="content"></div>
+				</div>
+			</div>
+			<div class="footer">
+				<button id="delete-button">Delete form</button>
+				<button id="clear-button">Clear answers</button>
+			</div>
+		</div>
+		<div id="form-creator" class="modal">
+			<div class="header">Create new form</div>
+			<div class="body">
+				<label>Form title
+					<input type="text" name="formTitle" required>
+				</label>
+				<label>Form template
+					<textarea name="template" placeholder="Enter the template in JSON format" required></textarea>
+				</label>
+			</div>
+			<div class="footer">
+				<button id="create-button">Create form</button>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+</script>
+<script src="/js/master.js" charset="utf-8"></script>
+
+</html>
