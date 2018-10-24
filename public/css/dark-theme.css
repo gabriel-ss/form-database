@@ -1,0 +1,89 @@
+:root {
+	--light-text: rgba(255, 255, 255, 0.8);
+	--dark-text: #444444;
+
+	--light-overlay: rgba(0, 0, 0, 0.05);
+	--dark-overlay: rgba(0, 0, 0, 0.125);
+
+	--default-color: #1e1e2f;
+	--default-color-alt: #e66ad2;
+	--default-text-color: var(--light-text);
+	--default-gradient: #;
+
+	--primary-color: #e14eca;
+	--primary-color-alt: #f3b7e9;
+	--primary-text-color: var(--light-text);
+	--primary-gradient: linear-gradient(225deg, #3e5c96, #a22bb1);
+
+	--secondary-color: #f4f5f7;
+	--secondary-color-alt: #E7E0F3;
+	--secondary-text-color: var(--light-text);
+	--secondary-gradient: linear-gradient(240deg, #e4d358, #a343b7);
+
+	--success-color: #00f2c3;
+	--success-color-alt: #a0fae8;
+	--success-text-color: var(--light-text);
+	--success-gradient: linear-gradient(300deg, #19ff4b, #8d9ed4);
+
+	--danger-color: #fd5d93;
+	--danger-color-alt: #fdb9d0;
+	--danger-text-color: var(--light-text);
+	--danger-gradient: linear-gradient(50deg, #f5133d, #c54dc4);
+	/* --danger-gradient: linear-gradient(50deg, #ff5a51, #c32525); */
+
+	--warning-color: #ff8d72;
+	--warning-color-alt: #ffcabf;
+	--warning-text-color: var(--light-text);
+	--warning-gradient: linear-gradient(45deg, #ffa629, #f15917);
+
+	--info-color: #1d8cf8;
+	--info-color-alt: #a7d2fc;
+	--info-text-color: var(--light-text);
+	--info-gradient: linear-gradient(225deg, #2bd9f5, #38d4ad);
+	/* --info-gradient: linear-gradient(225deg, #00f3ff, #69c9f5); */
+
+	--light-color: #adb5bd;
+	--light-color-alt: #dadde2;
+	--light-text-color: var(--dark-text);
+	--light-gradient: linear-gradient(100deg, #f9e4f3, #c6dfe6);
+
+	--dark-color: #212529;
+	--dark-color-alt: #b4b5b6;
+	--dark-text-color: var(--light-text);
+	--dark-gradient: linear-gradient(100deg, #532a55, #47345c);
+
+
+	--fonts: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+
+	--radius-small: .2em;
+	--radius-big: .3em;
+
+	--trasition-short: .25s;
+	--trasition-long: 1s;
+
+	--input-border: 1px;
+	--input-padding: .75em;
+	--input-focus-shadow: 0 0 0;
+
+	--table-line-border: 1px 0 0 0;
+}
+
+/* Card
+__________________________________________________ */
+
+.card {
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0;
+	background: #27293d;
+}
+
+.card>.header {
+	background-color: rgba(0, 0, 0, 0);
+	border-bottom: 0;
+	font-size: 2rem;
+}
+
+.card>.footer {
+	background-color: rgba(0, 0, 0, 0);
+	border-top: 0;
+}
