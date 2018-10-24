@@ -1,5 +1,5 @@
 const express = require("express");
-const htmlForm = require("./form-loader.js");
+const route = require("./routes");
 const api = require("./routes/api");
 
 const app = express();
@@ -11,9 +11,11 @@ app.use(express.static("public"));
 
 app.get("/", (request, response) => {
 
-	response.render("index.ejs", {html: htmlForm});
+	response.render("dashboard.ejs");
 
 });
+
+app.use("/", route);
 
 app.use("/api", api);
 
